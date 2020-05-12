@@ -1,0 +1,64 @@
+body{
+  margin: 0;
+  padding:0;
+  background: linear-gradient(to right,rgb(17, 40, 61),rgb(9, 26, 9));
+  color:white;
+}
+
+.row{
+justify-content:center;
+padding-top: 50px;
+}
+
+a{
+color: #ffffff;
+text-decoration:none;
+}
+
+.active{
+background-color: blue;
+color:#ffffff;
+}
+
+
+
+/*
+Метрики
+
+Свойства clientLeft и clientTop (ширина border-left/border-top)
+Свойство clientLeft содержит в себе ширину левой границы,
+а свойство clientTop - ширину верхней. (border)
+
+Свойства offsetWidth и offsetHeight
+Свойства offsetWidth и offsetHeight содержат в себе полную ширину и высоту элемента
+с учетом расширения padding и границей. (Full width+height,включая бордер и паддинг)
+
+Свойства clientWidth и clientHeight
+Свойство clientWidth содержит ширину текста + padding. То есть это полная ширина
+элемента за вычетом границы и полосы прокрутки. Свойство clientHeight -
+то же самое для высоты.
+
+Свойства scrollLeft и scrollTop
+Свойства scrollLeft и scrollTop содержат в себе информацию о том, на сколько элемент,
+имеющий полосу прокрутки, прокручен слева и сверху.
+
+Свойства scrollWidth и scrollHeight
+Следующее два свойства scrollWidth и scrollHeight содержат в себе полную ширину
+и высоту элемента с учетом прокрученной части.
+
+Свойство pageXOffset - горизонтальная прокрутка страницы. Фактически это scrollLeft
+специально для страницы, но со scrollLeft для страницы могут возникать некоторые
+проблемы.
+Свойство pageXOffset нельзя менять (в отличии от scrollLeft).
+
+Функция scrollTo
+позволяет прокрутить страницу по горизонтали и (или) вертикали в указанное место.
+
+Функция scrollBy
+позволяет прокрутить страницу по горизонтали и вертикали относительно текущей прокрутки.
+
+Метод scrollIntoView
+позволяет прокрутить страницу так, что бы элемент оказался вверху либо внизу.
+В параметре получает логическое значение: если true - элемент кажется вверху,
+если false - внизу. По умолчанию true.
+*/
