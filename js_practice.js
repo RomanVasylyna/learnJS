@@ -96,9 +96,10 @@ for(let i = 0; i < 2; i++) { //Повторяем цикл два раза
   }
 };
 
-appData.moneyPerDay = appData.budget / 30; //Добавляем новое свойство объекту (бюджет на день)
-alert("Ежедневный бюджет : " + appData.moneyPerDay);
+appData.moneyPerDay = parseInt(appData.budget) / 30; //Добавляем новое свойство объекту (бюджет на день)
+alert("Ежедневный бюджет : " + Math.round(appData.moneyPerDay));
 
+//Уровень достатка человека
 if(appData.moneyPerDay < 100){ //Если бюджет в день меньше 100
 console.log('Минимальный уровень достатка');
 } else if(appData.moneyPerDay > 100 && appData.moneyPerDay < 2000){
@@ -109,7 +110,9 @@ console.log('Зажиточный Хуила');
 console.log('Проверьте правильность введенных данных');
 }
 
-//Уровень достатка человека
+console.log(appData);
+
+
 
 
 
