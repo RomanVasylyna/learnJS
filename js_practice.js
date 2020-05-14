@@ -70,12 +70,92 @@ Continue - пропускает данный шаг (условие)
 if(num == 52){
 continue;
 }
+
+Функции JS
+Имя функции должно содержать глагол + имя сущ.(над чем производится действие)
+Например, showGreeting
+
+1.Function Expression
+
+function sayHi() { Пример
+  alert( "Привет" );
+}
+
+sayHi(); - Вызов функции
+
+2. Function Declaration
+
+let sayHi = function(person) { Пример
+  alert( "Привет, " + person );
+};
+ sayHi(); - Вызов функции
+
+ 3. Anonymous Functions
+ Функция без имени
+
+ button.addEventListener('click', function (event) { Пример
+    // эта анонимная функция будет вызвана при клике
+ }, false);
+
+ Функция сначала ищет переменную внутри себя(локально), а если не находит, то
+ обращается к глобальной
+
+ 4.Arrow Functions (Стрелочные функции) ES6
+
+ let penis = (a) => {
+ return a;
+ }
+
+ Если кода внутри мало, то можем опустить фигурные скобки
+ Слово return опускаем
+ let penis = (a,b) = > a+b;
+
+ Не всегда допустимо использование стрелочной функции
+
+
+
+
 */
 
 
+/*
+Еще два варианта цикла
+1. Цикл While
+let i = 0;
+while(i < 2) {
+  let question1 = prompt("Введите обязательную статью расходов в этом месяце");
+  let question2 = prompt("Во сколько обойдется?");
+
+  if((typeof(a)) === 'string' && (typeof(a)) != null && (typeof(b)) != null
+  && a != '' && b != '' && a.length < 50){ //Проверяем возвращает ли prompt строку и не пустая ли она
+    console.log("done"); //Выводим сообщение в консоль
+    appData.expenses[question1] = question2; //Добавляем ответ в наш объект
+  }
+  i++;
+}
+
+2.Цикл Do While.
+let i = 0;
+do{
+  let question1 = prompt("Введите обязательную статью расходов в этом месяце");
+  let question2 = prompt("Во сколько обойдется?");
+
+  if((typeof(a)) === 'string' && (typeof(a)) != null && (typeof(b)) != null
+  && a != '' && b != '' && a.length < 50){ //Проверяем возвращает ли prompt строку и не пустая ли она
+    console.log("done"); //Выводим сообщение в консоль
+    appData.expenses[question1] = question2; //Добавляем ответ в наш объект
+  }
+  i++;
+}
+while(i < 2);
+*/
+
+/*
+//Два Вопроса
 let money = prompt("Ваш бюджет на месяц?");
 let time = prompt("Введите дату в формате YYYY-MM-DD");
 
+//Объект с бюджетом
 let appData = {
 budget : money,
 expenses : {},
@@ -85,22 +165,25 @@ timeData : time,
 savings : false
 };
 
-for(let i = 0; i < 2; i++) { //Повторяем цикл два раза
-  let question1 = prompt("Введите обязательную статью расходов в этом месяце");
-  let question2 = prompt("Во сколько обойдется?");
-
-  if((typeof(a)) === 'string' && (typeof(a)) != null && (typeof(b)) != null
-  && a != '' && b != '' && a.length < 50){ //Проверяем возвращает ли prompt строку и не пустая ли она
-    console.log("done"); //Выводим сообщение в консоль
-    appData.expenses[question1] = question2; //Добавляем ответ в наш объект
-  }
+//Повторяем цикл два раза
+for(let i = 0; i < 2; i++) {
+//Каждый вопрос задаем по 2 раза
+let a = prompt("Введите обязательную статью расходов в этом месяце");
+let b = prompt("Во сколько обойдется?");
+//Проверяем условие (Два раза)
+if(typeof(a) === 'string' && typeof(a) != null && typeof(b) != null
+&& a != '' && b != '' && a.length < 50){ //Проверяем возвращает ли prompt строку и не пустая ли она
+  console.log("done"); //Выводим сообщение в консоль
+  appData.expenses[b] = a; //Добавляем ответ в наш объект
+}
 };
 
-appData.moneyPerDay = parseInt(appData.budget) / 30; //Добавляем новое свойство объекту (бюджет на день)
-alert("Ежедневный бюджет : " + Math.round(appData.moneyPerDay));
+//Добавляем новое свойство объекту (бюджет на день)
+appData.moneyPerDay = parseInt(appData.budget) / 30; //Бюджет на месяц делим на 30
+alert("Ежедневный бюджет : " + Math.round(appData.moneyPerDay)); //Выводим на экран
 
-//Уровень достатка человека
-if(appData.moneyPerDay < 100){ //Если бюджет в день меньше 100
+//Проверяем уровень достатка человека
+if(appData.moneyPerDay < 100){
 console.log('Минимальный уровень достатка');
 } else if(appData.moneyPerDay > 100 && appData.moneyPerDay < 2000){
 console.log('Средний уровень достатка');
@@ -110,13 +193,20 @@ console.log('Зажиточный Хуила');
 console.log('Проверьте правильность введенных данных');
 }
 
+//Выводим в консоль наш объект
 console.log(appData);
+*/
 
-
-
-
-
+let cameras = {
+price : 600,
+weight:2000,
+myDes:function(){
+  return `This cannon camera is of ${}$`
+}
+}
 
 /*
-Разобраться с объектами
+1.Виды циклов (видео)
+2.Статьи про функции (Петриченко)
+3.Видосы по стрелочным функциям
 */
